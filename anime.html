@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anime Quotes</title>
+
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+/* ----------------------
+🌸 Anime Gradient Background
+------------------------*/
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb, #84fab0);
+    background-size: 400% 400%;
+    animation: animeGradient 15s ease infinite;
+    padding-bottom: 60px;
+    overflow-x: hidden;
+}
+
+@keyframes animeGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ⭐ Page Title */
+.page-title {
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* 📸 Carousel */
+.carousel-inner img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 🧊 Glass Flip Cards */
+.cards-container {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.flip-card {
+    background: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 15px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+    /* Glassmorphic effect */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 20px;
+}
+
+/* Back of card */
+.flip-card-back {
+    transform: rotateY(180deg);
+    font-size: 1.2rem;
+    color: #ffd700;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .page-title { font-size: 2.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE TITLE -->
+<h1 class="page-title">Anime Quotes</h1>
+
+<!-- 🌟 BOOTSTRAP CAROUSEL -->
+<div id="animeCarousel" class="carousel slide container mt-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://i.pinimg.com/736x/35/7c/45/357c453697e88ca96a0f29c165dc8496.jpg" class="d-block w-100 rounded">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>“The world isn’t perfect. But it’s there for us, trying the best it can...”</h5>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/1200x/1d/58/90/1d5890d0396e6f8d1aa1b1915067a0fc.jpg" class="d-block w-100 rounded">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>“To know sorrow is not terrifying. What is terrifying is to know you can’t go back to happiness you could have.”</h5>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/1200x/2b/91/8d/2b918d8fce3d6edbe5123f946682ae17.jpg" class="d-block w-100 rounded">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>“If you don’t take risks, you can’t create a future.”</h5>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#animeCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- 💖 FLIP CARDS -->
+<div class="cards-container">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“No matter how deep the night, it always turns to day, so don’t give up.”</div>
+            <div class="flip-card-back">— Anime Wisdom</div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“The world isn’t perfect, but it’s there for us trying the best it can.”</div>
+            <div class="flip-card-back">— Anime Quote</div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“To know sorrow is not terrifying; what is terrifying is to know you can’t go back.”</div>
+            <div class="flip-card-back">— Anime Quote</div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“If you don’t take risks, you can’t create a future.”</div>
+            <div class="flip-card-back">— Anime Quote</div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“When you give up, your story ends. Keep going.”</div>
+            <div class="flip-card-back">— Anime Wisdom</div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“A lesson without pain is meaningless. Accept hardships to grow stronger.”</div>
+            <div class="flip-card-back">— Anime Quote</div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sad Quotes</title>
+
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+/* ----------------------
+🌧 Sad Gradient Background
+------------------------*/
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #434343, #000000, #2c3e50, #4b79a1, #283e51);
+    background-size: 400% 400%;
+    animation: sadGradient 15s ease infinite;
+    padding-bottom: 60px;
+    overflow-x: hidden;
+}
+
+@keyframes sadGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ⭐ Page Title */
+.page-title {
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+/* 📸 Carousel */
+.carousel-inner img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(70%);
+}
+
+/* 🧊 Glass Flip Cards */
+.cards-container {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.flip-card {
+    background: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 15px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+    /* Glassmorphic effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 20px;
+}
+
+/* Back of card */
+.flip-card-back {
+    transform: rotateY(180deg);
+    font-size: 1.2rem;
+    color: #dcdde1;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .page-title { font-size: 2.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE TITLE -->
+<h1 class="page-title">Sad Quotes</h1>
+
+<!-- 🌧 Bootstrap Carousel -->
+<div id="sadCarousel" class="carousel slide container mt-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://i.pinimg.com/736x/6c/17/df/6c17df8801aee14927e4e5be7d2b9ebb.jpg" class="d-block w-100 rounded">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>“Tears come from the heart and not from the brain.” — Leonardo da Vinci</h5>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/736x/ce/bf/44/cebf4461849928665d3ae81627839354.jpg" class="d-block w-100 rounded">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>“Every human walks around with a certain kind of sadness.” — Brad Pitt</h5>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/1200x/a7/2a/e8/a72ae87f87f4fcb288c842031a73e318.jpg" class="d-block w-100 rounded">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>“The walls we build around us to keep sadness out also keeps out the joy.” — Jim Rohn</h5>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#sadCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#sadCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- 🌟 Flip Cards -->
+<div class="cards-container">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“It's sad when someone you know becomes someone you knew.”</div>
+            <div class="flip-card-back">— Henry Rollins</div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“Sometimes, you have to give up on people, not because you don't care, but because they don't.”</div>
+            <div class="flip-card-back">— Unknown</div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“The saddest thing about life is you don’t remember half of it. You don’t even remember half of half.”</div>
+            <div class="flip-card-back">— Donald Miller</div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“Heavy hearts, like heavy clouds in the sky, are best relieved by the letting of a little water.”</div>
+            <div class="flip-card-back">— Christopher Morley</div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“Every man has his secret sorrows which the world knows not.”</div>
+            <div class="flip-card-back">— Henry Wadsworth Longfellow</div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">“There is no greater sorrow than to recall happiness in times of misery.”</div>
+            <div class="flip-card-back">— Dante Alighieri</div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

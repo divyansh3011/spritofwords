@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+h2{
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    
+}
+#discover-btn a{
+    color: white;
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+#discover-btn a:hover{
+   
+     color: rgb(102, 208, 102);
+     
+}
+
+
+#discover-btn{
+    backdrop-filter: blur(5px);
+    color: white;
+    background-color: transparent;
+    
+    padding: 10px 20px;
+    font-size: 21px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+#discover-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 8px rgba(78, 232, 7, 0.35);
+}
+
+       
+ .banner {
+    height: 100vh;
+    background: url('/banner-image.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.footer {
+        
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: autoShowAnimation both;
+        animation-timeline: view(90% 10%); /* best for footer */
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    
+    }
+    @keyframes autoShowAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(90px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }}
+
+    </style>
+</head>
+<body>
+    <header class="btn banner-anim delay-2" class="header">
+       <div>
+        <a href="index.html" class="logo"><h2>SOW</h2></a>
+       </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="category.html">Quotes</a>
+        <a href="category.html">Categories</a>
+        <a href="#">About</a>
+      </nav>
+    </header>
+    <div class="banner">
+    <div class="content">
+        <div class="title banner-anim">Spirit of Words</div>
+        <p class="banner-anim delay-1">
+            Explore a world of inspiring words crafted to motivate and enlighten.
+           Spirit of Words
+            turns simple lines into meaningful reflections.
+        </p>
+        <button class="btn banner-anim delay-2" id="discover-btn"><a href="category.html" class="btn"> Explore Quotes</a></button>
+    </div>
+</div>
+
+
+  <footer class="footer">
+    <div class="footer-content">
+        <h3 class="footer-title footer-anim">Spirit of Words</h3>
+
+        <p class="footer-desc footer-anim delay-1">
+            Inspiring thoughts crafted to motivate, enlighten, and uplift your spirit.
+        </p>
+
+        <div class="footer-links footer-anim delay-2">
+            <a href="index.html">Home</a>
+            <a href="category.html">Quotes</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <p class="copy footer-anim delay-3">
+            © 2025 Spirit of Words — All rights reserved.
+        </p>
+    </div>
+</footer>
+
+
+
+
+</body>
+<script>
+    window.addEventListener("load", () => {
+    // Wait 4 seconds
+    setTimeout(() => {
+        const bannerItems = document.querySelectorAll(".banner-anim");
+        bannerItems.forEach(item => item.classList.add("show"));
+    }, 4000); // 4000ms = 4 seconds
+});
+   
+
+
+
+
+
+</script>
+
+
+
+</html>
