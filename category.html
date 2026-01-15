@@ -46,19 +46,19 @@
     gap: 25px;
     font-family: 'Inter', sans-serif;
     font-size: 1em;
-    z-index: 999; /* keeps nav clickable */
+    z-index: 999; 
 }
 
-/* Nav links */
+
 .nav a {
     color:#000000;;
     text-decoration: none;
     transition: color 0.3s ease;
     position: relative;
-    display: inline-block; /* required for underline animation */
+    display: inline-block; 
 }
 
-/* Underline animation */
+
 .nav a::after {
     content: "";
     position: absolute;
@@ -70,7 +70,7 @@
     transition: width 0.3s ease;
 }
 
-/* Hover effects */
+
 .nav a:hover {
     color:#FF8A9D;
     text-shadow: 0 0 8px rgba(78, 190, 255, 0.5);
@@ -81,7 +81,7 @@
 }
 
 
-/* ---------- BASIC SETUP ---------- */
+
 body {
     font-family: 'Poppins', sans-serif;
     background: #eef1f5;
@@ -90,7 +90,7 @@ body {
     color: #222;
 }
 
-/* ---------- HERO CONTAINER ---------- */
+
 .container {
     width: 100vw;
     height: 55vh;
@@ -117,7 +117,7 @@ body {
     color: #333;
 }
 
-/* ---------- GRID ---------- */
+
 .category-container {
     width: 92%;
     margin: 20px auto 60px auto;
@@ -126,7 +126,7 @@ body {
     gap: 40px;
 }
 
-/* ---------- GLASS CARD ---------- */
+
 .card {
     height: 260px;
     border-radius: 18px;
@@ -143,7 +143,7 @@ body {
 
     opacity: 0;
 
-    /* FIXED — removed unsupported view-timeline properties */
+   
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
@@ -155,7 +155,7 @@ body {
     filter: brightness(65%);
 }
 
-/* Center text inside card */
+
 .card h2 {
     position: absolute;
     color: #fff;
@@ -167,7 +167,7 @@ body {
     transform: translateY(-50%);
 }
 
-/* ---------- HOVER COLOR EFFECTS ---------- */
+
 .card:hover {
     transform: scale(1.03);
 }
@@ -193,7 +193,7 @@ body {
     to   { opacity: 1; transform: translateX(0); }
 }
 
-/* ---------- RESPONSIVE ---------- */
+
 @media (max-width: 650px) {
     .category-container {
         grid-template-columns: 1fr;
@@ -219,43 +219,43 @@ body {
       </nav>
     </header>
 
-<!-- HERO SECTION -->
+
 <div class="container">
     <h1>Spirit of Words</h1>
     <p>Where thoughts take shape, emotions turn into lines, and every quote speaks directly to the soul.</p>
 </div>
 
-<!-- CATEGORY GRID -->
+
 <section class="category-container">
 
     <div class="card left motivation">
         <img src="https://i.pinimg.com/1200x/bc/16/ed/bc16ed3198be42cb4047220956cdb04f.jpg">
-        <a href="/motivatin.html"><h2>Motivation Quotes</h2></a>
+        <a href="motivatin.html"><h2>Motivation Quotes</h2></a>
     </div>
 
     <div class="card right love">
         <img src="https://i.pinimg.com/736x/27/38/29/273829cdb035a1f85eca57b073b04e64.jpg">
-        <a href="/love.html"><h2>Love Quotes</h2></a>
+        <a href="love.html"><h2>Love Quotes</h2></a>
     </div>
 
     <div class="card left life">
         <img src="https://i.pinimg.com/736x/58/6a/4f/586a4f2c1f2b98a05deccf59b1c1cd6d.jpg">
-        <a href="/life.html"><h2>Life Quotes</h2></a>
+        <a href="life.html"><h2>Life Quotes</h2></a>
     </div>
 
     <div class="card right sad">
         <img src="https://i.pinimg.com/1200x/8e/e3/9d/8ee39d0eb7e57535001bf5a003ab91f6.jpg">
-        <a href="/sad.html"><h2>Sad Quotes</h2></a>
+        <a href="sad.html"><h2>Sad Quotes</h2></a>
     </div>
 
     <div class="card left anime">
         <img src="https://i.pinimg.com/1200x/0e/d2/47/0ed2472702c10878ed0bb3814794fb56.jpg">
-        <a href="/anime.html"><h2>Anime Quotes</h2></a>
+        <a href="anime.html"><h2>Anime Quotes</h2></a>
     </div>
 
     <div class="card right friend">
         <img src="https://i.pinimg.com/1200x/f5/4c/38/f54c38a99793efb7c8f7a26d8163c823.jpg">
-        <a href="/friendship.html"><h2>Friendship Quotes</h2></a>
+        <a href="friendship.html"><h2>Friendship Quotes</h2></a>
     </div>
 
 </section>
