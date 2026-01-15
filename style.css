@@ -21,19 +21,19 @@ body {
     gap: 25px;
     font-family: 'Inter', sans-serif;
     font-size: 1em;
-    z-index: 999; /* keeps nav clickable */
+    z-index: 999; 
 }
 
-/* Nav links */
+
 .nav a {
     color: #a5ffcc;
     text-decoration: none;
     transition: color 0.3s ease;
     position: relative;
-    display: inline-block; /* required for underline animation */
+    display: inline-block; 
 }
 
-/* Underline animation */
+
 .nav a::after {
     content: "";
     position: absolute;
@@ -45,7 +45,7 @@ body {
     transition: width 0.3s ease;
 }
 
-/* Hover effects */
+
 .nav a:hover {
     color: #5efc97;
     text-shadow: 0 0 8px rgba(78, 255, 114, 0.5);
@@ -55,7 +55,7 @@ body {
     width: 100%;
 }
 
-/* Banner Base */
+
 .banner {
     display: flex;
     justify-content: center;
@@ -77,25 +77,25 @@ body {
         0 0 12px rgba(78, 255, 114, 0.25);
       
 }
-/* Banner Animation Base */
+
 .banner-anim {
     opacity: 0;
     transform: translateY(40px) scale(0.96);
     transition: 0.8s ease-out;
 }
 
-/* Stagger delays */
+
 .delay-1 { transition-delay: 0.2s; }
 .delay-2 { transition-delay: 0.4s; }
 .delay-3 { transition-delay: 0.6s; }
 
-/* Active class for visible state */
+
 .banner-anim.show {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
 
-/* Glow text */
+
 .glow-green {
     color: rgb(255, 255, 255);
     font-size: 1.2em;
@@ -105,7 +105,7 @@ body {
         0 0 12px rgba(78,255,114,0.25);
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .banner .content .title { font-size: 2.5em; }
     .banner p { font-size: 1em; }
@@ -133,7 +133,7 @@ body {
     mask-size: cover;
     mask-position: center;
 }
- /* Footer Base */
+ 
 .footer {
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(12px);
@@ -145,7 +145,7 @@ body {
     overflow: hidden;
 }
 
-/* Footer Fonts */
+
 .footer-title {
     font-family: 'Hallowed Grounds', serif;
     font-weight: 700;
@@ -163,7 +163,7 @@ body {
     opacity: 0.8;
 }
 
-/* Links Styling */
+
 .footer-links {
     margin: 25px 0;
 }
@@ -198,7 +198,7 @@ body {
     width: 100%;
 }
 
-/* Copyright */
+
 .copy {
     font-family: 'Inter', sans-serif;
     opacity: 0.6;
